@@ -27,10 +27,14 @@ class lineComparison {
         Double length2 = Math.sqrt(Math.pow((l2x2 - l2x1), 2) + Math.pow((l2y2 - l2y1), 2));
         System.out.println("Length of line two : " + length2);
 
-        if (length1.equals(length2)) {
-            System.out.println("Both lines are eqlal.");
+        int comparison = length1.compareTo(length2);
+
+        if (comparison == 0) {
+            System.out.println("Both lines are equal");
+        } else if (comparison > 0) {
+            System.out.println("Line one is greater than line two");
         } else {
-            System.out.println("Lines are not equal.");
+            System.out.println("Line one is less than line two");
         }
 
         sc.close();
